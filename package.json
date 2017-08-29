@@ -11,5 +11,11 @@
     "url": "http://gitlab.imginconline.com/noinfopath/noinfopath-dbschema.git"
   },
   "author": "gochinj",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "noinfopath-sql-client": "^1.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.0"
+  }
 }
