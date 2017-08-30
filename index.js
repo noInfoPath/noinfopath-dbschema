@@ -40,20 +40,10 @@ function _transform(indata) {
 }
 
 
-function _wrapSchema(schema) {
-	return {
-		read: sqlClient.read.bind(null, schema),
-		one: sqlClient.one.bind(null, schema),
-		update: sqlClient.update.bind(null, schema),
-		create: sqlClient.create.bind(null, schema),
-		destroy: sqlClient.destroy.bind(null, schema)
-	};
-}
-
 module.exports = function (sqlConnInfo) {
 	if (!sqlConnInfo) throw new Error("sqlConnInfo is a required parameter.")
 	sqlClient = sqlClientInit("mysql", sqlConnInfo);
-	schemaCRUD = _wrapSchema(schemaConfig);
+	schemaCRUD = sqlClient.wrapSchema(schemaConfig);
 
 	return new Promise(function (resolve, reject) {
 		schemaCRUD.read()
