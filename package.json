@@ -1,6 +1,6 @@
 {
   "name": "noinfopath-dbschema",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Queries the noinfopath_dbschema view from any database that has implement the DDL script shipped with this model. Currently on a MySQL version is supplied.",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "author": "gochinj",
   "license": "MIT",
   "dependencies": {
-    "noinfopath-sql-client": "^1.0.1"
+    "noinfopath-sql-client": "^2.1.0"
   },
   "devDependencies": {
     "mocha": "^3.5.0"
